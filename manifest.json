@@ -1,0 +1,41 @@
+{
+	"manifest_version": 2,
+	"name": "Pocket!",
+	"description": "Save RSS feeds to Pocket",
+	"version": "1.0",
+	"author": "byeron",
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "{3da0672f-e2fa-49f3-9431-8c82f11adbb5}",
+			"strict_min_version": "115.0",
+			"strict_max_version": "115.*"
+		}
+	},
+	"message_display_action": {
+		"default_popup": "mainPopup/popup.html",
+		"default_title": "Pocket!",
+		"default_icon": "images/pocket-32px.png"
+	},
+	"options_ui": {
+		"page": "options/options.html",
+		"open_in_tab": false,
+		"browser_style": true
+	},
+	"icons": {
+		"64": "images/pocket.png",
+		"32": "images/pocket-32px.png",
+		"16": "images/pocket-16px.png"
+	},
+	"permissions": [
+		"messagesRead",
+		"messagesMove",
+		"https://getpocket.com/v3/add",
+		"storage",
+		"messagesTags"
+	],
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	}
+}
